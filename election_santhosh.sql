@@ -27,6 +27,5 @@ where year='2004'
 group by st_name;
 
 -- 5
-select 'sai venkat' from dual;
 
---6
+
