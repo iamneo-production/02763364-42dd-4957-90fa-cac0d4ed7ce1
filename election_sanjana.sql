@@ -25,7 +25,3 @@ select  st_name, count(st_name) as totalcandidates
 from election
 where year='2004' 
 group by st_name;
-
--- 5
-
-
