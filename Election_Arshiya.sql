@@ -1,0 +1,1 @@
+select year,count(*) as femalecandidatecount from election where cand_sex='F' group by year;
