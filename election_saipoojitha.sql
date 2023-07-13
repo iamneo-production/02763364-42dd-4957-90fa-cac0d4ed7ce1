@@ -4,3 +4,5 @@ group by CAND_SEX,year
 having CAND_SEX='F';
 
 select * from election;
+
+--2
