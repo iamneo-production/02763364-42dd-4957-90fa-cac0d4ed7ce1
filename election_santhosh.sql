@@ -23,16 +23,5 @@ group by st_name;
 
 select  st_name, count(st_name) as totalcandidates
 from election
-where year='2004'
+where year='2004' 
 group by st_name;
-
--- 5
-
-select partyname, totvotpoll
-from election
-where st_name = 'Uttar Pradesh';
-
-
--- select partyname
--- from election
--- group by partyname;
