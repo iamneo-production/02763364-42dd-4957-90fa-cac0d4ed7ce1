@@ -1,5 +1,7 @@
 select * from election;
 
+create index dataget on election (st_name);
+
 -- 1
 select CAND_SEX, Year ,count(CAND_SEX)
 from election
@@ -27,4 +29,16 @@ where year='2004'
 group by st_name;
 
 -- 5
-select 'sai venkat' from dual;
+
+select partyname, sum(totvotpoll) from election
+where st_name = 'Andhra Pradesh' and year = '2014' and rownum < 6
+group by partyname
+order by sum(totvotpoll) desc
+;
+
+
+
+
+select st_name, count(st_name) from election
+where year = '2014'
+group by st_name;
