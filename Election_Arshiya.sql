@@ -16,5 +16,3 @@ select st_name,count(*) AS TotalCandidatesCount from election where year=2004 gr
 select partyname,sum(TOTVOTPOLL) AS TotalVotes from election where st_name='Uttar Pradesh' and year='2014' 
 group by partyname order by TotalVotes desc
 limit 5;
---ex
-select st_name from election where year=2014 and st_name='Uttar Pradesh';
