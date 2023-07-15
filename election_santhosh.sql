@@ -1,5 +1,7 @@
+-- Displays all details of table Election.
 select * from election;
 
+-- Creating Index.
 create index dataget on election (st_name, PARTYABBRE, PARTYNAME, year);
 
 -- 1
