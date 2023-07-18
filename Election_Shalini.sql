@@ -1,3 +1,4 @@
+
 select * from election;
 
 create index index_on_countoffemale on election(cand_sex,year);
