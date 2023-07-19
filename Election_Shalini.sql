@@ -1,2 +1,2 @@
-select * from election;
+select * from election where year=1977;
 
