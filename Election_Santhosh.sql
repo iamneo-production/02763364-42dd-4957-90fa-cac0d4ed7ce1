@@ -1,8 +1,10 @@
 -- Displays all details of table Election.
 select * from election;
 
--- Creating Index.
+-- Creating Index. 
 create index dataget on election (st_name, PARTYABBRE, PARTYNAME, year);
+-- Deleting Index
+drop index dataget;
 
 -- 1 Total Count of female candidates participating in each year.
 select CAND_SEX, Year ,count(CAND_SEX) as totalFemaleCandidates
