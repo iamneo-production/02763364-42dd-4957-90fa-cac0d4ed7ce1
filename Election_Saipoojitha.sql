@@ -25,14 +25,12 @@ group by st_name;
 
 
 -- 4 Total candidates participated in election in each state in year 2004
-
 select  st_name, count(st_name) as totalcandidates
 from election
 where year='2004' 
 group by st_name;
 
 -- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014
-
 select partyname, sum(totvotpoll) as TotalVotes from election
 where st_name = 'Uttar Pradesh' and year = '2014' 
 group by partyname
