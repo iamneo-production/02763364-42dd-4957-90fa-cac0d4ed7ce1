@@ -1,5 +1,7 @@
+-- Displays all details of table Election.
 select * from election;
 
+-- Creating Index.
 create index el_data on election (st_name, PARTYABBRE, PARTYNAME, year);
 
 -- 1 Total count of female candidates participating in each year
