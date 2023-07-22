@@ -30,7 +30,7 @@ from election
 where year='2004' 
 group by st_name;
 
--- 5 Top 5 parties that got the most votes in Uttar Pradesh in the Year 2014.
+-- 5 Top 5 parties that got the most votes in Uttar Pradesh in the Year 2014.!
 select partyname, sum(totvotpoll) as TotalVotes from election
 where st_name = 'Uttar Pradesh' and year = '2014' and rownum < 6
 group by partyname
