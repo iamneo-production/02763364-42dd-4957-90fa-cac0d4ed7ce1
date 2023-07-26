@@ -1,57 +1,38 @@
+-- Displays all details of table Election.
 select * from election;
---1
-create index idx_female on election(cand_sex,year);
 
-select CAND_SEX, Year ,count(CAND_SEX)
+-- Creating Index.
+create index el_data on election (st_name, PARTYABBRE, PARTYNAME, year);
+
+-- 1 Total count of female candidates participating in each year
+select CAND_SEX, Year ,count(CAND_SEX) as totalFemaleCandidates
 from election
 group by cand_sex,year
 having cand_sex='F'
-order by year desc;
+order by year;
 
---2
-create index idx_countofcanidates on election (st_name,year);
-
-select st_name, YEAR, count(CAND_NAME) as total_candidates
+-- 2 Total candidates participated in election at each state in each year
+select st_name, YEAR, count(st_name) as total_candidates
 from election
 group by st_name, YEAR
 order by st_name asc;
 
---3
-create index idx_st_name on election(st_name);
-
-
-explain plan for
-select  st_name , sum(totvotpoll) 
-from election
-where partyabbre='BJP' and year='1987'
-group by st_name;
-select * from table(DBMS_XPLAN.DISPLAY);
-
-select  st_name , sum(totvotpoll) 
+-- 3 total votes BJP got in each state in the year 1987
+select  st_name , sum(totvotpoll) as TotalVotes
 from election
 where partyabbre='BJP' and year='1987'
 group by st_name;
 
---4
 
-select  st_name, count(cand_name) as totalcandidates
+-- 4 Total candidates participated in election in each state in year 2004
+select  st_name, count(st_name) as totalcandidates
 from election
 where year='2004' 
 group by st_name;
 
---5
-
-select partyname,cand_name,totvotpoll from election
-where st_name='Andhra Pradesh' and year=1989
-order by totvotpoll desc 
+-- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014
+select partyname, sum(totvotpoll) as TotalVotes from election
+where st_name = 'Uttar Pradesh' and year = '2014' 
+group by partyname
+order by sum(totvotpoll) desc
 fetch first 5 rows only;
-
-SELECT partyname,SUM(totvotpoll) AS tot_vot
-FROM election
-GROUP BY  partyname
-having st_name = 'Andhra Pradesh' AND year = 1989
-ORDER BY totvotpoll DESC
-fetch first 5 rows only;
-
-
-select * from election;
