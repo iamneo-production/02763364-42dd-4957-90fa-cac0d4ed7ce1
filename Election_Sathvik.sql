@@ -34,5 +34,5 @@ SELECT partyname, SUM(totvotpoll) AS TotalVotes
 FROM election
 WHERE st_name = 'Uttar Pradesh' AND year = 2014
 GROUP by partyname
-ORDER BY TotalVotes DESC
+ORDER BY SUM(totvotpoll) DESC
 FETCH FIRST 5 ROWS ONLY;
