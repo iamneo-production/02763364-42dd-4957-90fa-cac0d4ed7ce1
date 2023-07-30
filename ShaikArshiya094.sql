@@ -1,9 +1,9 @@
 --Index created for table election
 
 create index indx on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
-
+ghp_SjWtbVee2vmTQYuKeavLFIZUD4rGv02wRIcz
 -- 1 Total count of female candidates participating in each year
-
+hhg
 select year,count(*) as femalecandidatecount from election where cand_sex='F' group by year;
 
 -- 2 Total candidates participated in the election at each state in each year
