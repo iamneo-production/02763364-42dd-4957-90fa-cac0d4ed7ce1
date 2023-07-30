@@ -1,4 +1,4 @@
---Index created for table election
+--Index created for table election of online voting system
 
 create index indx on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
 
