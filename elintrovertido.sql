@@ -33,9 +33,5 @@ group by st_name;
 select partyname, sum(totvotpoll) as TotalVotes from election
 where st_name = 'Uttar Pradesh' and year = '2014'
 group by partyname
-<<<<<<< HEAD:Election_Santhosh.sql
-order by sum(totvotpoll) desc;
-=======
 order by sum(totvotpoll) desc
 fetch first 5 rows only;
->>>>>>> a1e68e1e054c9c6ac5a7d229ed186862b4d205bb:elintrovertido.sql
