@@ -2,8 +2,6 @@
 
 create index indx on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
 
---election table 
-select * from election;
 
 -- 1 Total count of female candidates participating in each year
 
