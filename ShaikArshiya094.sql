@@ -1,6 +1,6 @@
 --Index created for table election of online voting 
 
--- 1 Total count of female candidates participating in each year
+-- 1 Total count of female candidates participating in each year...
 
 select year,count(*) as femalecandidatecount from election where cand_sex='F' group by year;
 
