@@ -1,15 +1,14 @@
--- Displays all details of table Election.
-select * from election;
-
--- Creating Index.
+-- Creating Index. 
 create index dataget on election (st_name, PARTYABBRE, PARTYNAME, year);
+-- Deleting Index
+drop index dataget;
 
 -- 1 Total Count of female candidates participating in each year.
 select CAND_SEX, Year ,count(CAND_SEX) as totalFemaleCandidates
 from election
 group by cand_sex,year
 having cand_sex='F'
-order by year;
+order by year asc;
 
 -- 2 Total candidates participated in election at each state every year.
 select st_name, YEAR, count(st_name) as total_candidates
@@ -30,8 +29,9 @@ from election
 where year='2004' 
 group by st_name;
 
--- 5 Top 5 parties that got the most votes in Uttar Pradesh in the Year 2014.
+-- 5 Top 5 parties that got the most votes in Uttar Pradesh in the Year 2014.!
 select partyname, sum(totvotpoll) as TotalVotes from election
-where st_name = 'Uttar Pradesh' and year = '2014' and rownum < 6
+where st_name = 'Uttar Pradesh' and year = '2014'
 group by partyname
-order by sum(totvotpoll) desc;
+order by sum(totvotpoll) desc
+fetch first 5 rows only;
