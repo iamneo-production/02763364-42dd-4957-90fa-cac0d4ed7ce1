@@ -16,7 +16,7 @@ select st_name,sum(totvotpoll) AS TotalVotes from election where year='1987' and
 
 select st_name,count(*) AS TotalCandidatesCount from election where year=2004 group by st_name;
 
--- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014
+-- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014 (sql)
 
 select partyname,sum(TOTVOTPOLL) AS TotalVotes from election where st_name='Uttar Pradesh' and year='2014' 
 group by partyname order by TotalVotes desc
