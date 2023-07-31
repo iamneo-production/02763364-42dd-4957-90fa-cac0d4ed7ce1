@@ -10,7 +10,7 @@ select year,count(*) as femalecandidatecount from election where cand_sex='F' gr
 
 select st_name,year,count(*) AS TotalCandidatesCount from election group by st_name,year;
 
--- 3 Total votes BJP got in each state in the year 1987
+-- 3 Total votes BJP got in each state in the year 1987..
 
 select st_name,sum(totvotpoll) AS TotalVotes from election where year='1987' and partyabbre='BJP' group by st_name;
 
