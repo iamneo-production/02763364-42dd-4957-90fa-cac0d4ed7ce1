@@ -5,6 +5,7 @@
 create index el_data on election (st_name, PARTYABBRE, PARTYNAME, year);
 
 -- 1 Total count of female candidates participating in each year
+-- counting candidates
 select CAND_SEX, Year ,count(CAND_SEX) as totalFemaleCandidates
 from election
 group by cand_sex,year
