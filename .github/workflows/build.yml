@@ -21,4 +21,8 @@ jobs:
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
 =======
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
+<<<<<<< HEAD
 >>>>>>> 11666dfc072faa6ce2c4666e1ad84be2c2cf2f37
+=======
+>>>>>>> Oracle-Workspace-elintrovertido
+>>>>>>> adb58621d24ef4e3082c6c36c5e019ab72b30ce6
