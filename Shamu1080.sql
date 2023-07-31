@@ -8,7 +8,7 @@ select CAND_SEX, Year ,count(CAND_SEX) as totalFemaleCandidates
 from election
 group by cand_sex,year
 having cand_sex='F'
-order by year ASC;
+order by year asc;
 
 -- 2 Total candidates participated in election at each state in each year
 select st_name, YEAR, count(st_name) as total_candidates
