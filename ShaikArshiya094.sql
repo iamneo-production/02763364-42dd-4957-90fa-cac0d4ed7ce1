@@ -33,3 +33,4 @@ select st_name,count(*) AS TotalCandidatesCount from election where year=2004 gr
 select partyname,sum(TOTVOTPOLL) AS TotalVotes from election where st_name='Uttar Pradesh' and year='2014' 
 group by partyname order by TotalVotes desc
 fetch first 5 ROWS ONLY;
+
