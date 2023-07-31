@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 --Index created for table election of online voting system
 =======
 --Index created for table election of online voting 
 >>>>>>> Oracle-Workspace
+=======
+--Index created for table election
+>>>>>>> Oracle-Workspace-ShaikArshiya094
 
--- 1 Total count of female candidates participating in each year...
+create index indx on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
+
+-- 1 Total count of female candidates participating in each year..
 
 select year,count(*) as femalecandidatecount from election where cand_sex='F' group by year;
 
@@ -12,7 +18,7 @@ select year,count(*) as femalecandidatecount from election where cand_sex='F' gr
 
 select st_name,year,count(*) AS TotalCandidatesCount from election group by st_name,year;
 
--- 3 Total votes BJP got in each state in the year 1987..
+-- 3 Total votes BJP got in each state in the year 1987
 
 select st_name,sum(totvotpoll) AS TotalVotes from election where year='1987' and partyabbre='BJP' group by st_name;
 
@@ -22,12 +28,16 @@ select st_name,count(*) AS TotalCandidatesCount from election where year=2004 gr
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 -- 5 Top 5 parties that got  most votes in uttar pradesh in the year 2014
 =======
 -- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014
 >>>>>>> Oracle-Workspace-ShaikArshiya094
 =======
 -- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014 (sql)
+>>>>>>> Oracle-Workspace-ShaikArshiya094
+=======
+-- 5 Top 5 parties that got the most votes in uttar pradesh in the year 2014
 >>>>>>> Oracle-Workspace-ShaikArshiya094
 
 select partyname,sum(TOTVOTPOLL) AS TotalVotes from election where st_name='Uttar Pradesh' and year='2014' 
