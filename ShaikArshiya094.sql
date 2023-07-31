@@ -1,6 +1,7 @@
 --Index created for table election of online voting 
 
-create index idex on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
+create index i on election (st_name, PARTYABBRE, PARTYNAME, cand_sex,year);
+
 
 -- 1 Total count of female candidates participating in each year
 
