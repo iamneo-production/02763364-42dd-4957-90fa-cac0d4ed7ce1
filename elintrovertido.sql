@@ -1,4 +1,5 @@
 -- Creating Index. 
+-- 
 create index dataget on election (st_name, PARTYABBRE, PARTYNAME, year);
 -- Deleting Index
 drop index dataget;
