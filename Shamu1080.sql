@@ -1,5 +1,5 @@
-
-
+-- Creating Index. 
+-- select * from election to display files
 -- Creating Index.
 create index el_data on election (st_name, PARTYABBRE, PARTYNAME, year);
 
