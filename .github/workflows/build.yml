@@ -18,7 +18,11 @@ jobs:
         env:
           GITHUB_TOKEN: 1f06796f-2e03-4530-a21d-ef77cdbee8df
 <<<<<<< HEAD
+<<<<<<< HEAD
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
 =======
           SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
 >>>>>>> Oracle-Workspace-elintrovertido
+=======
+          SONAR_TOKEN: 811c9a490983734401ba4e491eaefc8bfa7281de
+>>>>>>> 3297b16eecfc40c6d7d49e05abbbe36f7dab4bad
