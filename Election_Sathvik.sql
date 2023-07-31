@@ -4,7 +4,8 @@
 SELECT  year, COUNT(st_name) AS Total_Count_of_Female_Candidates
 FROM election
 WHERE cand_sex = 'F'
-GROUP BY year ASC;
+GROUP BY year ASC
+ORDER BY year ASC;
 
 -- 2.SQL query to find the total candidates who partitcipated in the election at each state in each year
 
