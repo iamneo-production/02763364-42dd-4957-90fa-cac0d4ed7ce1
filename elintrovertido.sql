@@ -1,5 +1,5 @@
 -- Creating Index. 
--- 
+-- select * from election to display files
 create index dataget on election (st_name, PARTYABBRE, PARTYNAME, year);
 -- Deleting Index
 drop index dataget;
